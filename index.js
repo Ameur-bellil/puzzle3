@@ -1,4 +1,38 @@
+//prevent right click
+document.oncontextmenu =() => {
+    alert("Don't try right click")
+    return false;
+}
 
+/* still anyone can inspect elements by f12 key; view page source by ctrl + u key .copy by ctrl+ c. paste
+by ctrl +v key Let's prevent these
+ */
+document.onkeydown = e  =>{
+
+    //prevent key f12
+    if(e.key === "F12"){
+        alert("Don't try to inspect element")
+        return false;
+    }
+    //Prevent showing page source by ctrl +u
+    if (e.ctrlKey && e.key==="u"){
+        alert("Don't try to view page sources ");
+        return false;
+    }
+
+    //prevent copying anything from the page
+    if (e.ctrlKey && e.key ==="c"){
+        alert("Don't try to copy page element");
+        return false;
+    }
+
+    //prevent paste anything from other sources
+    if (e.ctrlKey && e.key ==="v"){
+        alert("Don't try to paste anything to page");
+        return false;
+    }
+
+}
 const thmasButton = document.querySelector('#thmas-button');
 const thmasInputText = document.querySelector('#thmas-input-text');
 
