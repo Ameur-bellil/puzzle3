@@ -39,10 +39,10 @@ const thmasInputText = document.querySelector('#thmas-input-text');
 thmasButton.addEventListener('click', clickButton);
 
 function clickButton() {
-    var URL = "https://ameur-bellil.github.io/congrats/" ;
+    var URL = "https://ameur-bellil.github.io/puzzle4/" ;
     var correctinput = parseInt(thmasInputText.value);
 
-    if (correctinput === 32) {
+    if (correctinput === 15) {
         var win = window.open(URL, "_blank");
     }else{
         window.alert("Try again")
