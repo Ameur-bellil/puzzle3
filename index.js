@@ -42,7 +42,7 @@ function clickButton() {
     var URL = "https://ameur-bellil.github.io/puzzle4/" ;
     var correctinput = parseInt(thmasInputText.value.trim());
 
-    if (correctinput === 21) {
+    if (correctinput === 15) {
         var win = window.open(URL, "_blank");
     }else{
         window.alert("Try again")
